@@ -1,0 +1,8 @@
+h1
+  | Tesseract-OCR
+p
+  | Upload an image file to have OCR perfomed on it and get hocr output in tsv format
+
+form.form-horizontal  action='/process_file' method='POST' enctype="multipart/form-data"
+  input type='file' name='upload'
+  input type='submit' value ='Upload'
