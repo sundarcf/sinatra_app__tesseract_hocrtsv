@@ -25,7 +25,7 @@ class App < Sinatra::Base
     tempfile = Tempfile.new('tesseract_outputbase__')
     output_fn = tempfile.path
     tempfile.close(unlink_now=true)
-    cmd = "tesseract #{upload_filename} #{output_fn} hocrtsv"
+    cmd = "app/tesseract-ocr/bin/tesseract #{upload_filename} #{output_fn} hocrtsv"
     cmd_res = `#{cmd}`
     output_file = "#{original_filename}.hocr.tsv"
     output_fn = "#{output_fn}.hocr.tsv"
